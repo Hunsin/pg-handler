@@ -3,20 +3,28 @@ A simple Node.js PostgreSQL handler which wraps [node-postgres](https://github.c
 
 ## Usage
 Please install node-postgres & node-pg-native first.
-`$ npm install pg pg-native`
+```
+$ npm install pg pg-native
+```
 Clone it, then simply require it in your project
-`var db = require("./path/to/pg-handler");`
+```
+var db = require("./path/to/pg-handler");
+```
 
 ## Config
 Setting your database connection.
-`db.config("postgres://username:password@localhost/database");`
+```
+db.config("postgres://username:password@localhost/database");
+```
 
 ## Query
 Query PostgreSQL DB
-`db.query(queryString, [params, callback(results)]);`
+```
+db.query(queryString, [params, callback(results)]);
+```
 
 ## Example
-```
+```js
 var express = require("express"),
 	router = express.Router(),
 	db = require("./pg-handler)";
